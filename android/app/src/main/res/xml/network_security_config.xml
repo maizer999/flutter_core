@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<network-security-config>-->
+<!--    <base-config>-->
+<!--        <trust-anchors>-->
+<!--            <certificates src="@raw/dev_private_key"/>-->
+<!--            <certificates src="system"/>-->
+<!--        </trust-anchors>-->
+<!--    </base-config>-->
+<!--</network-security-config>-->
+
+
+<!--<network-security-config>-->
+<!--<base-config cleartextTrafficPermitted="true">-->
+<!--    <trust-anchors>-->
+<!--        <certificates src="system" />-->
+<!--    </trust-anchors>-->
+<!--</base-config>-->
+<!--</network-security-config>-->
+
+
+
+<network-security-config>
+    <domain-config>
+        <domain includeSubdomains="true">riyd-devenv.mopm.gov.sa</domain>
+        <trust-anchors>
+            <certificates src="@raw/dev_private_key"/>
+        </trust-anchors>
+    </domain-config>
+</network-security-config>
