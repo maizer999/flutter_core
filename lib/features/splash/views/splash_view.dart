@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_core/features/login/views/login_view.dart';
 import 'dart:async';
 
 import '../../../constants/app_colors.dart';
@@ -25,7 +26,7 @@ class _SplashViewState extends State<SplashView> {
     await Future.delayed(const Duration(seconds: 3));
     if (mounted) {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => const UserLoginView()),
+        MaterialPageRoute(builder: (context) =>  UserLoginView()),
       );
     }
   }
@@ -80,21 +81,3 @@ class _SplashViewState extends State<SplashView> {
   }
 }
 
-class UserLoginView extends StatelessWidget {
-  const UserLoginView({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Login')),
-      body:  Center(
-        child:  CommonTextWidget(
-          text: AppStrings.splashTitle,
-          color: AppColors.kWhite,
-          fontSize: AppSizes.size30,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-    );
-  }
-}

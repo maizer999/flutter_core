@@ -28,22 +28,3 @@ class MyApp extends StatelessWidget {
 }
 
 
-
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Login')),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            // Add login logic here
-          },
-          child: const Text('Login'),
-        ),
-      ),
-    );
-  }
-}
